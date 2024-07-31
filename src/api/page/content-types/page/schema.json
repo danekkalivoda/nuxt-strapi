@@ -32,6 +32,25 @@
         }
       },
       "type": "text"
+    },
+    "Homepage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "Url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
     }
   }
 }
