@@ -1,0 +1,71 @@
+{
+  "collectionName": "components_misc_hero_slides",
+  "info": {
+    "displayName": "HeroSlide",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "textBackground": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "White",
+        "Black"
+      ],
+      "default": "None",
+      "required": true
+    },
+    "textAlignX": {
+      "type": "enumeration",
+      "enum": [
+        "Left",
+        "Center",
+        "Right"
+      ],
+      "default": "Left",
+      "required": true
+    },
+    "textAlignY": {
+      "type": "enumeration",
+      "enum": [
+        "Top",
+        "Center",
+        "Bottom"
+      ],
+      "default": "Bottom",
+      "required": true
+    },
+    "buttonName": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "enumeration",
+      "enum": [
+        "White",
+        "Black"
+      ],
+      "default": "White",
+      "required": true
+    }
+  }
+}

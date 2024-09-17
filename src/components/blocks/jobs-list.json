@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_jobs_lists",
+  "info": {
+    "displayName": "Jobs list",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "showFilter": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSubmitButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.settings"
+    }
+  }
+}

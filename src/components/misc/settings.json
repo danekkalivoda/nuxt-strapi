@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_misc_settings",
+  "info": {
+    "displayName": "baseSettings",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "Transparent",
+        "White",
+        "Light",
+        "Dark",
+        "Brand"
+      ],
+      "default": "Transparent",
+      "required": true
+    },
+    "topGap": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "required": true,
+      "default": "Medium"
+    },
+    "bottomGap": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "required": true,
+      "default": "Medium"
+    }
+  }
+}

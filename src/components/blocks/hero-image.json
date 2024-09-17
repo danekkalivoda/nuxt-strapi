@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_hero_images",
+  "info": {
+    "displayName": "HeroImage",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "autoplay": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "showProgress": {
+      "type": "boolean",
+      "default": true
+    },
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.settings"
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.hero-slide"
+    }
+  }
+}
