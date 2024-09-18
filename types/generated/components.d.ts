@@ -25,7 +25,7 @@ export interface MiscSettings extends Schema.Component {
 export interface MiscHeroSlide extends Schema.Component {
   collectionName: 'components_misc_hero_slides';
   info: {
-    displayName: 'HeroSlide';
+    displayName: 'Carousel slide';
     icon: 'picture';
     description: '';
   };
@@ -50,6 +50,18 @@ export interface MiscHeroSlide extends Schema.Component {
   };
 }
 
+export interface BlocksText extends Schema.Component {
+  collectionName: 'components_blocks_texts';
+  info: {
+    displayName: 'Text';
+    icon: 'file';
+  };
+  attributes: {
+    text: Attribute.String &
+      Attribute.CustomField<'plugin::tiptap-editor.tiptap-editor'>;
+  };
+}
+
 export interface BlocksJobsList extends Schema.Component {
   collectionName: 'components_blocks_jobs_lists';
   info: {
@@ -67,7 +79,7 @@ export interface BlocksJobsList extends Schema.Component {
 export interface BlocksHeroImage extends Schema.Component {
   collectionName: 'components_blocks_hero_images';
   info: {
-    displayName: 'HeroImage';
+    displayName: 'Carousel';
     icon: 'picture';
     description: '';
   };
@@ -86,6 +98,7 @@ declare module '@strapi/types' {
     export interface Components {
       'misc.settings': MiscSettings;
       'misc.hero-slide': MiscHeroSlide;
+      'blocks.text': BlocksText;
       'blocks.jobs-list': BlocksJobsList;
       'blocks.hero-image': BlocksHeroImage;
     }

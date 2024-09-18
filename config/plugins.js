@@ -2,6 +2,10 @@
 'use strict';
 
 module.exports = {
+  'tiptap-editor': {
+    enabled: true,
+    resolve: './src/plugins/tiptap-editor'
+  },
   menus: {
     config: {
       maxDepth: 2,

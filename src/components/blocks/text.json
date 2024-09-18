@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blocks_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tiptap-editor.tiptap-editor"
+    }
+  }
+}

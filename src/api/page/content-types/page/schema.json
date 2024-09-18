@@ -60,7 +60,8 @@
       "type": "dynamiczone",
       "components": [
         "blocks.jobs-list",
-        "blocks.hero-image"
+        "blocks.hero-image",
+        "blocks.text"
       ]
     },
     "hideTitle": {

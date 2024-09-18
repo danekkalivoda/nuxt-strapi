@@ -406,7 +406,9 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    blocks: Attribute.DynamicZone<['blocks.jobs-list', 'blocks.hero-image']> &
+    blocks: Attribute.DynamicZone<
+      ['blocks.jobs-list', 'blocks.hero-image', 'blocks.text']
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
