@@ -2,13 +2,36 @@
   "collectionName": "components_blocks_texts",
   "info": {
     "displayName": "Text",
-    "icon": "file"
+    "icon": "file",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
       "type": "customField",
       "customField": "plugin::tiptap-editor.tiptap-editor"
+    },
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.settings"
+    },
+    "boxed": {
+      "type": "boolean",
+      "default": false
+    },
+    "centered": {
+      "type": "boolean",
+      "default": true
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "Small",
+        "Medium",
+        "Large",
+        "Full"
+      ]
     }
   }
 }

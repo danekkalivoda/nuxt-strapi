@@ -15,7 +15,8 @@
     "@strapi/strapi": "4.25.5",
     "better-sqlite3": "11.1.2",
     "strapi-plugin-menus": "1.6.1",
-    "strapi-plugin-populate-deep": "3.0.1"
+    "strapi-plugin-populate-deep": "3.0.1",
+    "strapi-plugin-react-icons": "^0.3.1"
   },
   "author": {
     "name": "A Strapi developer"

@@ -2,6 +2,7 @@
 'use strict';
 
 module.exports = {
+  "react-icons": true,
   'tiptap-editor': {
     enabled: true,
     resolve: './src/plugins/tiptap-editor'

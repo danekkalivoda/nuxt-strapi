@@ -40,6 +40,48 @@
       ],
       "required": true,
       "default": "Medium"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundPosition": {
+      "type": "enumeration",
+      "enum": [
+        "TopLeft",
+        "TopCenter",
+        "TopRight",
+        "CenterLeft",
+        "Center",
+        "CenterRight",
+        "BottomLeft",
+        "BottomCenter",
+        "BottomRight"
+      ],
+      "default": "Center"
+    },
+    "backgroundRepeat": {
+      "type": "enumeration",
+      "enum": [
+        "NoRepeat",
+        "Repeat",
+        "RepeatX",
+        "RepeatY"
+      ],
+      "default": "NoRepeat",
+      "required": false
+    },
+    "backgroundSize": {
+      "type": "enumeration",
+      "enum": [
+        "Auto",
+        "Cover",
+        "Contain"
+      ]
     }
   }
 }

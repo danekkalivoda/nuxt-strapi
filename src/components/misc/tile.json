@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_misc_tiles",
+  "info": {
+    "displayName": "tile",
+    "icon": "grid",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "customField",
+      "customField": "plugin::react-icons.icon"
+    },
+    "text": {
+      "type": "customField",
+      "customField": "plugin::tiptap-editor.tiptap-editor"
+    }
+  }
+}

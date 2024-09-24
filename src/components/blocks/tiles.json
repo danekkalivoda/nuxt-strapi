@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_tiles",
+  "info": {
+    "displayName": "Tiles",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.settings"
+    },
+    "tiles": {
+      "displayName": "tile",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.tile"
+    }
+  }
+}

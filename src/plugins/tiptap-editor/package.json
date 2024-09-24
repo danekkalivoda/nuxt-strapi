@@ -12,6 +12,12 @@
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
     "@strapi/icons": "^1.6.3",
+    "@tiptap/extension-color": "^2.7.1",
+    "@tiptap/extension-highlight": "^2.7.1",
+    "@tiptap/extension-link": "^2.7.1",
+    "@tiptap/extension-text-align": "^2.7.1",
+    "@tiptap/extension-text-style": "^2.7.1",
+    "@tiptap/extension-underline": "^2.7.1",
     "@tiptap/react": "^2.7.1",
     "@tiptap/starter-kit": "^2.7.1",
     "prop-types": "^15.7.2"

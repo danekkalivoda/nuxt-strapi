@@ -69,7 +69,7 @@ export default {
     app.customFields.register({
       name: 'tiptap-editor',
       pluginId: pluginId,
-      type: 'string',
+      type: 'richtext',
       intlLabel: {
         id: `${pluginId}.label`,
         defaultMessage: 'Tiptap Editor',

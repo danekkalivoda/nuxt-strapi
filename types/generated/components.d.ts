@@ -1,5 +1,20 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MiscTile extends Schema.Component {
+  collectionName: 'components_misc_tiles';
+  info: {
+    displayName: 'tile';
+    icon: 'grid';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String;
+    icon: Attribute.String & Attribute.CustomField<'plugin::react-icons.icon'>;
+    text: Attribute.RichText &
+      Attribute.CustomField<'plugin::tiptap-editor.tiptap-editor'>;
+  };
+}
+
 export interface MiscSettings extends Schema.Component {
   collectionName: 'components_misc_settings';
   info: {
@@ -19,6 +34,26 @@ export interface MiscSettings extends Schema.Component {
     bottomGap: Attribute.Enumeration<['None', 'Small', 'Medium', 'Large']> &
       Attribute.Required &
       Attribute.DefaultTo<'Medium'>;
+    backgroundImage: Attribute.Media<'images'>;
+    backgroundPosition: Attribute.Enumeration<
+      [
+        'TopLeft',
+        'TopCenter',
+        'TopRight',
+        'CenterLeft',
+        'Center',
+        'CenterRight',
+        'BottomLeft',
+        'BottomCenter',
+        'BottomRight'
+      ]
+    > &
+      Attribute.DefaultTo<'Center'>;
+    backgroundRepeat: Attribute.Enumeration<
+      ['NoRepeat', 'Repeat', 'RepeatX', 'RepeatY']
+    > &
+      Attribute.DefaultTo<'NoRepeat'>;
+    backgroundSize: Attribute.Enumeration<['Auto', 'Cover', 'Contain']>;
   };
 }
 
@@ -50,15 +85,33 @@ export interface MiscHeroSlide extends Schema.Component {
   };
 }
 
+export interface BlocksTiles extends Schema.Component {
+  collectionName: 'components_blocks_tiles';
+  info: {
+    displayName: 'Tiles';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    baseSettings: Attribute.Component<'misc.settings'>;
+    tiles: Attribute.Component<'misc.tile', true>;
+  };
+}
+
 export interface BlocksText extends Schema.Component {
   collectionName: 'components_blocks_texts';
   info: {
     displayName: 'Text';
     icon: 'file';
+    description: '';
   };
   attributes: {
-    text: Attribute.String &
+    text: Attribute.RichText &
       Attribute.CustomField<'plugin::tiptap-editor.tiptap-editor'>;
+    baseSettings: Attribute.Component<'misc.settings'>;
+    boxed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    centered: Attribute.Boolean & Attribute.DefaultTo<true>;
+    width: Attribute.Enumeration<['Small', 'Medium', 'Large', 'Full']>;
   };
 }
 
@@ -96,8 +149,10 @@ export interface BlocksHeroImage extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'misc.tile': MiscTile;
       'misc.settings': MiscSettings;
       'misc.hero-slide': MiscHeroSlide;
+      'blocks.tiles': BlocksTiles;
       'blocks.text': BlocksText;
       'blocks.jobs-list': BlocksJobsList;
       'blocks.hero-image': BlocksHeroImage;

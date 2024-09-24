@@ -61,26 +61,9 @@
       "components": [
         "blocks.jobs-list",
         "blocks.hero-image",
-        "blocks.text"
+        "blocks.text",
+        "blocks.tiles"
       ]
-    },
-    "hideTitle": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "hideDescription": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean"
     }
   }
 }
