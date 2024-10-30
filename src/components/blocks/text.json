@@ -32,6 +32,12 @@
         "Large",
         "Full"
       ]
+    },
+    "images": {
+      "displayName": "media",
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.media"
     }
   }
 }

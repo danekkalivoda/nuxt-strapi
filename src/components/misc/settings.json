@@ -82,6 +82,24 @@
         "Cover",
         "Contain"
       ]
+    },
+    "topBorder": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Light"
+      ],
+      "default": "None",
+      "required": true
+    },
+    "bottomBorder": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Light"
+      ],
+      "required": true,
+      "default": "None"
     }
   }
 }

@@ -1,0 +1,85 @@
+{
+  "collectionName": "components_misc_media",
+  "info": {
+    "displayName": "images",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "List",
+        "Simple grid",
+        "Bento grid",
+        "Carousel"
+      ],
+      "default": "Simple grid",
+      "required": true
+    },
+    "beforeText": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "alignX": {
+      "type": "enumeration",
+      "enum": [
+        "Left",
+        "Center",
+        "Right"
+      ],
+      "default": "Center",
+      "required": true
+    },
+    "alignY": {
+      "type": "enumeration",
+      "enum": [
+        "Top",
+        "Center",
+        "Bottom"
+      ],
+      "default": "Top",
+      "required": true
+    },
+    "onMobile": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "onTablet": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "onDesktop": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "overlapY": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "default": "Medium",
+      "required": true
+    }
+  }
+}

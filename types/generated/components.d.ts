@@ -12,6 +12,8 @@ export interface MiscTile extends Schema.Component {
     icon: Attribute.String & Attribute.CustomField<'plugin::react-icons.icon'>;
     text: Attribute.RichText &
       Attribute.CustomField<'plugin::tiptap-editor.tiptap-editor'>;
+    linkUrl: Attribute.String;
+    linkText: Attribute.String;
   };
 }
 
@@ -54,6 +56,53 @@ export interface MiscSettings extends Schema.Component {
     > &
       Attribute.DefaultTo<'NoRepeat'>;
     backgroundSize: Attribute.Enumeration<['Auto', 'Cover', 'Contain']>;
+    topBorder: Attribute.Enumeration<['None', 'Light']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'None'>;
+    bottomBorder: Attribute.Enumeration<['None', 'Light']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'None'>;
+  };
+}
+
+export interface MiscMedia extends Schema.Component {
+  collectionName: 'components_misc_media';
+  info: {
+    displayName: 'images';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    images: Attribute.Media<'images', true> & Attribute.Required;
+    theme: Attribute.Enumeration<
+      ['List', 'Simple grid', 'Bento grid', 'Carousel']
+    > &
+      Attribute.Required &
+      Attribute.DefaultTo<'Simple grid'>;
+    beforeText: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    alignX: Attribute.Enumeration<['Left', 'Center', 'Right']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'Center'>;
+    alignY: Attribute.Enumeration<['Top', 'Center', 'Bottom']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'Top'>;
+    onMobile: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    onTablet: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    onDesktop: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    overlapY: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    size: Attribute.Enumeration<['Small', 'Medium', 'Large']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'Medium'>;
   };
 }
 
@@ -95,6 +144,9 @@ export interface BlocksTiles extends Schema.Component {
   attributes: {
     baseSettings: Attribute.Component<'misc.settings'>;
     tiles: Attribute.Component<'misc.tile', true>;
+    theme: Attribute.Enumeration<['Theme 1', 'Theme 2', 'Theme 3']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'Theme 1'>;
   };
 }
 
@@ -112,6 +164,7 @@ export interface BlocksText extends Schema.Component {
     boxed: Attribute.Boolean & Attribute.DefaultTo<false>;
     centered: Attribute.Boolean & Attribute.DefaultTo<true>;
     width: Attribute.Enumeration<['Small', 'Medium', 'Large', 'Full']>;
+    images: Attribute.Component<'misc.media'>;
   };
 }
 
@@ -151,6 +204,7 @@ declare module '@strapi/types' {
     export interface Components {
       'misc.tile': MiscTile;
       'misc.settings': MiscSettings;
+      'misc.media': MiscMedia;
       'misc.hero-slide': MiscHeroSlide;
       'blocks.tiles': BlocksTiles;
       'blocks.text': BlocksText;

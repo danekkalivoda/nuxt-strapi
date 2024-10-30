@@ -17,6 +17,16 @@
       "type": "component",
       "repeatable": true,
       "component": "misc.tile"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "Theme 1",
+        "Theme 2",
+        "Theme 3"
+      ],
+      "default": "Theme 1",
+      "required": true
     }
   }
 }

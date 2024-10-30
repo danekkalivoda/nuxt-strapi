@@ -17,6 +17,12 @@
     "text": {
       "type": "customField",
       "customField": "plugin::tiptap-editor.tiptap-editor"
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "linkText": {
+      "type": "string"
     }
   }
 }
