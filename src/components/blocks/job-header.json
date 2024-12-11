@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_job_headers",
+  "info": {
+    "displayName": "jobHeader",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "baseSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "misc.settings"
+    },
+    "tags": {
+      "displayName": "tags",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.tags"
+    },
+    "centered": {
+      "type": "boolean",
+      "default": false
+    },
+    "buttons": {
+      "displayName": "buttons",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.buttons"
+    }
+  }
+}

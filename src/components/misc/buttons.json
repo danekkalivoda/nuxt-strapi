@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_misc_buttons",
+  "info": {
+    "displayName": "buttons",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "primary"
+      ],
+      "default": "default",
+      "required": true
+    },
+    "action": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_misc_tags",
+  "info": {
+    "displayName": "tags",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "icon": {
+      "type": "customField",
+      "customField": "plugin::react-icons.icon"
+    }
+  }
+}

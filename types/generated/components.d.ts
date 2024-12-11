@@ -17,6 +17,19 @@ export interface MiscTile extends Schema.Component {
   };
 }
 
+export interface MiscTags extends Schema.Component {
+  collectionName: 'components_misc_tags';
+  info: {
+    displayName: 'tags';
+    description: '';
+  };
+  attributes: {
+    value: Attribute.String & Attribute.Required;
+    showTitle: Attribute.Boolean & Attribute.DefaultTo<true>;
+    icon: Attribute.String & Attribute.CustomField<'plugin::react-icons.icon'>;
+  };
+}
+
 export interface MiscSettings extends Schema.Component {
   collectionName: 'components_misc_settings';
   info: {
@@ -134,6 +147,22 @@ export interface MiscHeroSlide extends Schema.Component {
   };
 }
 
+export interface MiscButtons extends Schema.Component {
+  collectionName: 'components_misc_buttons';
+  info: {
+    displayName: 'buttons';
+    icon: 'cog';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String;
+    theme: Attribute.Enumeration<['default', 'primary']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'default'>;
+    action: Attribute.String;
+  };
+}
+
 export interface BlocksTiles extends Schema.Component {
   collectionName: 'components_blocks_tiles';
   info: {
@@ -179,6 +208,24 @@ export interface BlocksJobsList extends Schema.Component {
     showFilter: Attribute.Boolean & Attribute.DefaultTo<true>;
     showSubmitButton: Attribute.Boolean & Attribute.DefaultTo<false>;
     baseSettings: Attribute.Component<'misc.settings'>;
+    filterTabs: Attribute.Enumeration<['All', 'Positions', 'Candidates']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'All'>;
+  };
+}
+
+export interface BlocksJobHeader extends Schema.Component {
+  collectionName: 'components_blocks_job_headers';
+  info: {
+    displayName: 'jobHeader';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    baseSettings: Attribute.Component<'misc.settings'>;
+    tags: Attribute.Component<'misc.tags', true>;
+    centered: Attribute.Boolean & Attribute.DefaultTo<false>;
+    buttons: Attribute.Component<'misc.buttons', true>;
   };
 }
 
@@ -199,17 +246,34 @@ export interface BlocksHeroImage extends Schema.Component {
   };
 }
 
+export interface BlocksHeader extends Schema.Component {
+  collectionName: 'components_blocks_headers';
+  info: {
+    displayName: 'header';
+    icon: 'layer';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String & Attribute.Required;
+    baseSettings: Attribute.Component<'misc.settings'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'misc.tile': MiscTile;
+      'misc.tags': MiscTags;
       'misc.settings': MiscSettings;
       'misc.media': MiscMedia;
       'misc.hero-slide': MiscHeroSlide;
+      'misc.buttons': MiscButtons;
       'blocks.tiles': BlocksTiles;
       'blocks.text': BlocksText;
       'blocks.jobs-list': BlocksJobsList;
+      'blocks.job-header': BlocksJobHeader;
       'blocks.hero-image': BlocksHeroImage;
+      'blocks.header': BlocksHeader;
     }
   }
 }

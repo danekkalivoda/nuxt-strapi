@@ -20,7 +20,7 @@
     "strapi-plugin-menus": "1.6.1",
     "strapi-plugin-populate-deep": "3.0.1",
     "strapi-plugin-react-icons": "^0.3.1",
-    "styled-components": "5.2.1"
+    "styled-components": "5.3.3"
   },
   "author": {
     "name": "A Strapi developer"

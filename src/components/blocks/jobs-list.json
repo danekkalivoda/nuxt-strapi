@@ -19,6 +19,16 @@
       "type": "component",
       "repeatable": false,
       "component": "misc.settings"
+    },
+    "filterTabs": {
+      "type": "enumeration",
+      "enum": [
+        "All",
+        "Positions",
+        "Candidates"
+      ],
+      "default": "All",
+      "required": true
     }
   }
 }

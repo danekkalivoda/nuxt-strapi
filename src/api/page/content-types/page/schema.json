@@ -62,7 +62,8 @@
         "blocks.jobs-list",
         "blocks.hero-image",
         "blocks.text",
-        "blocks.tiles"
+        "blocks.tiles",
+        "blocks.header"
       ]
     }
   }
